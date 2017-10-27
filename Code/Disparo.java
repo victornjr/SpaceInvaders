@@ -8,7 +8,7 @@ import javax.swing.ImageIcon;
 
 
 public class Disparo {
-	protected Image disparo; 
+	protected Image disparo;
 	protected int posX,
 	posY;
 	private final int vel = 5;
@@ -18,7 +18,7 @@ public class Disparo {
 	public Disparo(int x, int y){
 		this.posX = x;
 		this.posY = y;
-		this.disparo= new ImageIcon("Disparo-buenos.png").getImage();
+		this.disparo= new ImageIcon("../Images/Disparo-buenos.png").getImage();
 		this.visible = true;
 	}
 
@@ -50,7 +50,7 @@ public class Disparo {
 		if (this.posY < 0){
 			this.visible = false;
 		}
-	}	
+	}
 
 
 

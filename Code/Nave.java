@@ -27,7 +27,7 @@ public class Nave {
 	private boolean pausa;
 
 	public Nave(){
-		this.nave = new ImageIcon("Nave.png").getImage();
+		this.nave = new ImageIcon("../Images/Nave.png").getImage();
 		posY = 550;
 		posX = 250-nave.getWidth(null)/2;
 		movDir = 0;
@@ -57,7 +57,7 @@ public class Nave {
 	public void limitePantalla(){ // Toda la logica la pondre aca
 		if((this.posX>0 && movDir<0) || (this.posX<450 && movDir>0))
 			this.posX += movDir;
-	}	
+	}
 	public void pausarNave(boolean pausa){
 		this.pausa = pausa;
 	}
@@ -80,7 +80,7 @@ public class Nave {
 		{
 			if(!pausa){
 				try{
-					disparoTanque = new File("shoot.wav");
+					disparoTanque = new File("../Sound/shoot.wav");
 					ais = AudioSystem.getAudioInputStream(disparoTanque);
 					clipTanque = AudioSystem.getClip();
 					clipTanque.open(ais);

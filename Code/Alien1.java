@@ -12,24 +12,24 @@ public class Alien1 extends Aliens{
 					imagen1Alien3,
 					imagen2Alien3;
 	private int queImagenEs;
-	
+
 	public Alien1(int x, int y,int nivel) {
 		super(x, y,nivel);
 		if(nivel%2==0){
 			queImagenEs=2;
-			this.imagen1Alien2 = new ImageIcon("Alien2.1.png").getImage();
-			this.imagen2Alien2 = new ImageIcon("Alien2.2.png").getImage();
+			this.imagen1Alien2 = new ImageIcon("../Images/Alien2.1.png").getImage();
+			this.imagen2Alien2 = new ImageIcon("../Images/Alien2.2.png").getImage();
 		}
 		else if(nivel%3==0){
 			queImagenEs=3;
-			this.imagen1Alien1 = new ImageIcon("Alien1.1.png").getImage();
-			this.imagen2Alien1 = new ImageIcon("Alien1.2.png").getImage();
+			this.imagen1Alien1 = new ImageIcon("../Images/Alien1.1.png").getImage();
+			this.imagen2Alien1 = new ImageIcon("../Images/Alien1.2.png").getImage();
 		}
 		else{
 			queImagenEs=1;
-			this.imagen1Alien3 = new ImageIcon("Alien3.1.png").getImage();
-			this.imagen2Alien3 = new ImageIcon("Alien3.2.png").getImage();
-		}	
+			this.imagen1Alien3 = new ImageIcon("../Images/Alien3.1.png").getImage();
+			this.imagen2Alien3 = new ImageIcon("../Images/Alien3.2.png").getImage();
+		}
 	}
 
 	public void cambiarImg(Image alien){
@@ -41,7 +41,7 @@ public class Alien1 extends Aliens{
 			//System.out.println("Imagen 1 alien 1");
 			this.setAlien(this.imagen1Alien1);
 		}
-	
+
 		if(alien == this.imagen1Alien2){
 			//System.out.println("Imagen 2 alien 2");
 			this.setAlien(this.imagen2Alien2);
@@ -62,10 +62,10 @@ public class Alien1 extends Aliens{
 			this.setAlien(this.imagen1Alien3);
 			//System.out.println("Cambio Alien 2 : "+ this.getVisible());
 		}
-		
+
 	}
 	public int getPuntosAlien(){
 		return this.queImagenEs;
 	}
-	
+
 }

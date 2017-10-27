@@ -104,7 +104,7 @@ public class Pantalla extends JPanel implements ActionListener, KeyListener, Run
 
 		//Agregar el sonido de la explosion de aliens
 		try{
-			explosionAlien = new File("invaderkilled.wav");
+			explosionAlien = new File("../Sound/invaderkilled.wav");
 			ais2 = AudioSystem.getAudioInputStream(explosionAlien);
 			clipExplosion = AudioSystem.getClip();
 			clipExplosion.open(ais2);
@@ -114,7 +114,7 @@ public class Pantalla extends JPanel implements ActionListener, KeyListener, Run
 		}
 		//Agregar el sonido de la explosion del tanque
 		try{
-			explosionTanque = new File("explosion.wav");
+			explosionTanque = new File("../Sound/explosion.wav");
 			ais3 = AudioSystem.getAudioInputStream(explosionTanque);
 			clipExplosionTanque = AudioSystem.getClip();
 			clipExplosionTanque.open(ais3);
@@ -125,7 +125,7 @@ public class Pantalla extends JPanel implements ActionListener, KeyListener, Run
 		for (int i=0; i<10; i++){
 			this.tablaS[i] = "";
 		}
-		
+
 		//Poner Escudos
 		this.escudoIzq = new Escudo();
 		this.escudoCentro = new EscudoCentro();
@@ -155,7 +155,7 @@ public class Pantalla extends JPanel implements ActionListener, KeyListener, Run
 
 		this.timer = new Timer(30, this);
 		cambioImg.start();
-		this.timer.start();	
+		this.timer.start();
 
 	}
 
@@ -230,7 +230,7 @@ public class Pantalla extends JPanel implements ActionListener, KeyListener, Run
 		}
 
 		Toolkit.getDefaultToolkit().sync();
-		
+
 		if(!this.continuar){
 			g.drawString(this.textoPausa, (this.getWidth()/2)-10, this.getHeight()/2);
 		}
@@ -254,7 +254,7 @@ public class Pantalla extends JPanel implements ActionListener, KeyListener, Run
 			}
 			if((d.getContorno().intersects(this.escudoIzq.getContornoEscudo())) && this.escudoIzq.getVisible() && !this.escudoDestruidoIzq){
 				d.setVisible(false);
-				this.escudoIzq.setVida(this.escudoIzq.getVida()-1); 
+				this.escudoIzq.setVida(this.escudoIzq.getVida()-1);
 				this.escudoIzq.setImgDanado(this.escudoIzq.getVida());
 				if(this.escudoIzq.getVida()<=0){
 					//System.out.println("He sido destruido");
@@ -277,7 +277,7 @@ public class Pantalla extends JPanel implements ActionListener, KeyListener, Run
 			}
 			if((d.getContorno().intersects(this.escudoDer.getContornoEscudo()))&& this.escudoDer.getVisible() && !this.escudoDestruidoDer){
 				d.setVisible(false);
-				this.escudoDer.setVida(this.escudoDer.getVida()-1);  
+				this.escudoDer.setVida(this.escudoDer.getVida()-1);
 				this.escudoDer.setImgDanado(this.escudoDer.getVida());
 				if(this.escudoDer.getVida()<=0){
 					//System.out.println("He sido destruido");
@@ -510,24 +510,24 @@ public class Pantalla extends JPanel implements ActionListener, KeyListener, Run
 							aliens[i][j].setPosX(posIXAlien + i*(aliens[i][j].getAlien().getWidth(null)-30) + i*espacioAlien);
 							aliens[i][j].setPosY(posIYAlien + j*(aliens[i][j].getAlien().getHeight(null)-30) + j*espacioAlien);
 						}
-					}	
+					}
 					fin = false;
 					sobran = columnaAlien * filaAlien;
 					timer.start();
-					
+
 					//revivir los escudos
 					escudoDestruidoIzq = false;
 					escudoDestruidoCentro = false;
 					escudoDestruidoDer = false;
-					
+
 					//poner de nuevo la imagen original y visible
 					escudoIzq.setImgDestruido(true);
 					escudoIzq.setVisible(true);
 					escudoCentro.setImgDestruido(true);
 					escudoCentro.setVisible(true);
 					escudoDer.setImgDestruido(true);
-					escudoDer.setVisible(true);					
-					
+					escudoDer.setVisible(true);
+
 					//resetear las vidas a los escudos
 					escudoIzq.setVida(10);
 					escudoCentro.setVida(10);
@@ -551,7 +551,7 @@ public class Pantalla extends JPanel implements ActionListener, KeyListener, Run
 			nave.soltarTecla(e);
 		}
 	}
-	
+
 	public void highScores(){
 		try {
 			this.nombreG = JOptionPane.showInputDialog("Ingresa tu nombre");
@@ -585,19 +585,19 @@ public class Pantalla extends JPanel implements ActionListener, KeyListener, Run
 						this.highScores[i][1] = "" +  this.marcadorTotal;
 						break;
 					}
-				}	
+				}
 			}
 			PrintWriter pw = new PrintWriter(new FileWriter("HighScores.txt"));
 			for (int i=0; i<10;i++){
 				pw.println(this.highScores[i][0] + " " + this.highScores[i][1]);
 			}
 			pw.close();
-		} 
-			
+		}
+
 		catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}		
+		}
 	}
 
 	public void finDelJuego(int ver){
@@ -652,7 +652,7 @@ public class Pantalla extends JPanel implements ActionListener, KeyListener, Run
 
 	@Override
 	public void keyTyped(KeyEvent e) {
-		
+
 
 	}
 
@@ -673,7 +673,7 @@ public class Pantalla extends JPanel implements ActionListener, KeyListener, Run
 				e.printStackTrace();
 			}
 		}
-		
+
 	}
 
 	/*

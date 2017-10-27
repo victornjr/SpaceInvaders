@@ -25,16 +25,16 @@ public class Aliens {
 	public Aliens(int x, int y, int nivel){
 		if(nivel%2==0){
 			//System.out.println("Se uso la primer imagen");
-			this.alien = new ImageIcon("Alien2.1.png").getImage();
+			this.alien = new ImageIcon("../Images/Alien2.1.png").getImage();
 		}
 		else if(nivel%3==0){
 			//System.out.println("Se uso la segunda imagen");
-			this.alien = new ImageIcon("Alien3.1.png").getImage();
+			this.alien = new ImageIcon("../Images/Alien3.1.png").getImage();
 		}
 		else{
 			//System.out.println("Se uso la tercera imagen");
-			this.alien = new ImageIcon("Alien1.1.png").getImage();
-		}	
+			this.alien = new ImageIcon("../Images/Alien1.1.png").getImage();
+		}
 		this.posX = x;
 		this.posY = y;
 		this.vel = 1;

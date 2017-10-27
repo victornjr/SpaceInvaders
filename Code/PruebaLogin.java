@@ -15,7 +15,7 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 
 public class PruebaLogin extends JFrame implements KeyListener{
-	
+
 	//para disparos tanque
 		private File bgMusic;
 		private AudioInputStream ais;
@@ -29,9 +29,9 @@ public class PruebaLogin extends JFrame implements KeyListener{
 		this.setResizable(false);
 		this.add(pl);
 		try{
-			bgMusic = new File("Space Invaders OST - Pluto.wav");
+			bgMusic = new File("../Sound/Space Invaders OST - Pluto.wav");
 			ais = AudioSystem.getAudioInputStream(bgMusic);
-			
+
 			clip = AudioSystem.getClip();
 			clip.open(ais);
 			clip.loop(Clip.LOOP_CONTINUOUSLY);
@@ -49,10 +49,10 @@ public class PruebaLogin extends JFrame implements KeyListener{
 		this.addKeyListener(this);
 		this.pack();
 		this.setVisible(true);
-		
-		
+
+
 	}
-	
+
 	public static void main(String[] args) {
 		PruebaLogin pr = new PruebaLogin();
 
@@ -61,14 +61,14 @@ public class PruebaLogin extends JFrame implements KeyListener{
 
 	@Override
 	public void keyPressed(KeyEvent e) {
-	
-		
+
+
 	}
 
 	@Override
 	public void keyReleased(KeyEvent arg0) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
@@ -77,7 +77,7 @@ public class PruebaLogin extends JFrame implements KeyListener{
 		if(e.getKeyChar() == 'p'){
 			this.dispose();
 			Juego j = new Juego();
-		}	
-		
+		}
+
 	}
 }

@@ -13,19 +13,19 @@ public class Escudo {
 				posY;
 	private int vida = 20;
 	private boolean visible;
-	
+
 	public Escudo(){
-		this.imgInicial = new ImageIcon("Escudo.png").getImage();
+		this.imgInicial = new ImageIcon("../Images/Escudo.png").getImage();
 		this.escudo = this.imgInicial;
 		this.posX = 50;
 		this.posY = 410;
 		this.visible = true;
-		
+
 	}
 	public Image setImgDestruido(boolean visible){
 		if(!visible){
-			this.destruido = new ImageIcon("EscudoDestruido.png").getImage();
-			
+			this.destruido = new ImageIcon("../Images/EscudoDestruido.png").getImage();
+
 			this.escudo = this.destruido;
 		}
 		else if(visible){
@@ -37,36 +37,36 @@ public class Escudo {
 		//System.out.println("La vida es" + vida);
 		if(vida<=4){
 			//System.out.println("Mi vida es: " + vida);
-			this.danado = new ImageIcon("Escudo5Destruido.png").getImage();
+			this.danado = new ImageIcon("../Images/Escudo5Destruido.png").getImage();
 			this.escudo = this.danado;
 		}
 		else if(vida <= 7){
 			//System.out.println("Mi vida es: " + vida);
-			this.danado = new ImageIcon("Escudo4Dano.png").getImage();
+			this.danado = new ImageIcon("../Images/Escudo4Dano.png").getImage();
 			this.escudo = this.danado;
 		}
 		else if(vida <=10){
 			//System.out.println("Mi vida es: " + vida);
-			this.danado = new ImageIcon("Escudo3Dano.png").getImage();
+			this.danado = new ImageIcon("../Images/Escudo3Dano.png").getImage();
 			this.escudo = this.danado;
 		}
 		else if(vida <= 14){
 			//System.out.println("Mi vida es: " + vida);
-			this.danado = new ImageIcon("Escudo2Dano.png").getImage();
+			this.danado = new ImageIcon("../Images/Escudo2Dano.png").getImage();
 			this.escudo = this.danado;
 		}
 		else if(vida <= 18){
 			//System.out.println("Mi vida es: " + vida);
-			this.danado = new ImageIcon("Escudo1Dano.png").getImage();
+			this.danado = new ImageIcon("../Images/Escudo1Dano.png").getImage();
 			this.escudo = this.danado;
 		}
 		return this.danado;
 	}
-	
+
 
 	public Image getEscudo(){
 		return this.escudo;
-		
+
 	}
 	public int getX(){
 		return this.posX;
@@ -74,7 +74,7 @@ public class Escudo {
 	public int getY(){
 		return this.posY;
 	}
-	
+
 	public Rectangle getContornoEscudo(){
 		return new Rectangle(this.posX, this.posY, this.escudo.getWidth(null)-30, this.escudo.getHeight(null));
 	}
@@ -88,7 +88,7 @@ public class Escudo {
 	public boolean getVisible(){
 		return this.visible;
 	}
-	
+
 	public void setVisible(boolean visible){
 		this.visible = visible;
 	}

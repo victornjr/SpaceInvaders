@@ -31,7 +31,7 @@ public class EscudoDer extends Escudo{
 			this.danado = new ImageIcon("Escudo5Destruido.png").getImage();
 			this.escudo = this.danado;
 		}
-		
+
 		return this.escudo;
 	}
 	*/

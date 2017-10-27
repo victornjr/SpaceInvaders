@@ -13,6 +13,6 @@ public class Juego extends JFrame{
 		this.setResizable(false);
 		this.pack();
 		this.setVisible(true);
-		
+
 	}
 }
