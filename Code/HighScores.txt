@@ -1,0 +1,10 @@
+Victor 20000000
+Sebastian 15000000
+Default 10000000
+Default 500000
+Default 250000
+Default 150000
+Default 100000
+Default 50000
+Default 25000
+Default 10000
